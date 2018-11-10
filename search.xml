@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[加密测试]]></title>
+    <url>%2F2018%2F11%2F11%2F%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>password</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一个blog,Hexo]]></title>
+    <url>%2F2018%2F11%2F10%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAblog-Hexo%2F</url>
+    <content type="text"><![CDATA[这是我的第一个blog 以后我就要在这里发表我的日志了,欢迎大家关注! 博客地址:duanyihao.github.io]]></content>
+      <tags>
+        <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F11%2F10%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
