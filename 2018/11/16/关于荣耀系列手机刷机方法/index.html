@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="MAXshiroi&#39;s blog">
 <meta property="og:description" content="还没写完,具体内容请点开看~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-16T17:52:17.120Z">
+<meta property="og:updated_time" content="2018-11-17T17:28:10.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于荣耀系列手机刷机方法">
 <meta name="twitter:description" content="还没写完,具体内容请点开看~">
@@ -435,6 +435,58 @@
 </blockquote>
 <p>4.等cmd窗口上显示时间之后(0.xx s),还用fastboot reboot进入rec,格式化data<br>5.刷写面具,框架等内容,然后重启高兴吧</p>
 <p>先写这些吧…有时间再补充…<br>2018年11月17日 01时36分42秒</p>
+<p><strong>接下来讲讲如何刷回来</strong></p>
+<p>1.<a href="https://pan.baidu.com/s/1TYuBXVqE1EpIC0Ka_wX1Kg" target="_blank" rel="noopener">提取码:9fws</a>装到可以使用的android手机上。<br>2.打开软件,选择“添加型号”,输入你的手机型号并添加,确认无误后,点开你的型号,选择最新的版本,点击下载.<br>3,勾选这三个文件点击确认</p>
+<blockquote>
+<p>update.zip</p>
+</blockquote>
+<blockquote>
+<p>update_full_xxx-xxxx_all_cn.zip</p>
+</blockquote>
+<blockquote>
+<p>update_data_full_public.zip</p>
+</blockquote>
+<p>等到上面的进度条转完以后看下一步.</p>
+<p>4.打开你的文件管理器，进入如下目录</p>
+<blockquote>
+<p>//sdcard/TeamMT/FirmwareFinder/xxxxxx/</p>
+</blockquote>
+<p>将下载好的三个文件按照如下说明更改文件名</p>
+<blockquote>
+<p>update.zip不用变动</p>
+</blockquote>
+<blockquote>
+<p>update_data_full_public.zip改成update_data_full.zip</p>
+</blockquote>
+<blockquote>
+<p>update_full_xxx-xxxx_all_cn.zip改成update_all_hw.zip</p>
+</blockquote>
+<p>5,返回上级目录,</p>
+<ul>
+<li>将xxxxxx改为HWOTA,</li>
+<li>到<a href="https://pan.baidu.com/s/1CN9k1wpWRYAp9uNXuUXmmA" target="_blank" rel="noopener">提取码:u24</a>下载HuRUppdater.zip</li>
+<li>将HuRUpdater.zip放到HWOTA文件夹下</li>
+<li>再次返回到上级目录</li>
+<li>将HWOTA这个文件夹剪切到sdcard根目录下</li>
+<li>确认HWOTA文件夹下放有这四个压缩文件</li>
+</ul>
+<blockquote>
+<p>HuRupdater.zip</p>
+</blockquote>
+<blockquote>
+<p>update.zip</p>
+</blockquote>
+<blockquote>
+<p>update_data_full.zip</p>
+</blockquote>
+<blockquote>
+<p>update_all_hw.zip</p>
+</blockquote>
+<p>至此,准备工作就做好了<br>接下来讲怎么刷入:</p>
+<p>1.刷入rec(请看上面刷入rec的方法)<br>2.重启到rec,选择安装,然后选择HWOTA目录下的HuRUdater.zip刷入<br>3.刷好以后,返回到主页,选择重启,重启到recovery,确定<br>4,等待进入到华为的recovery清除数据和缓存,清除完成后重启.</p>
+<p>等待开机,结束</p>
+<blockquote>
+</blockquote>
 <p>(ps:如果你已经刷上了第三方的rec并解了data锁,可以跳过前9步)</p>
 
       
