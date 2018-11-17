@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MAXshiroi&#39;s blog</title>
+  
+  <subtitle>MAXshiroi的个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-17T17:28:10.916Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>MAXshiroi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于荣耀系列手机刷机方法</title>
+    <link href="http://yoursite.com/2018/11/16/%E5%85%B3%E4%BA%8E%E8%8D%A3%E8%80%80%E7%B3%BB%E5%88%97%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/11/16/关于荣耀系列手机刷机方法/</id>
+    <published>2018-11-16T15:35:47.000Z</published>
+    <updated>2018-11-17T17:28:10.916Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>准备工具:</strong></p><ul><li>荣耀6x/7x手机x1</li><li>能正常进入系统的安卓设备x1</li><li>数据线x1(有些是充电线不可用)</li><li>电脑x1</li></ul><p><strong>我们先来做准备工作</strong></p><p> 1.安装adb驱动程序,点击这里下载:<a href="https://pan.baidu.com/s/1svw3nQUZ_--J_cSn4Z8uRQ" target="_blank" rel="noopener">提取码:r5i4</a>,把里面的文件夹放到d盘根目录.<br> 2.下载这个rec:<a href="https://pan.baidu.com/s/1oQAbGWqjXf8NrChMz0FZIA" target="_blank" rel="noopener">提取码:ydkx</a>,放到刚刚解压出来的adb文件夹内.这个是EMUI8.0的rec</p><p><strong>我想刷原生系统</strong>.</p><p>ps:底包必须是EMUI8才可以刷xda上面的project treble映像</p><p>1.我们先去xda找想要的原生系统,下载.<br> 这里附上openkirin的镜像:</p><ul><li>OmniROM:<a href="https://openkirin.net/builds/openkirin_omnirom_20180930_b3.1.img.xz" target="_blank" rel="noopener">点我下载</a></li><li>RRosROM:<a href="https://openkirin.net/builds/openkirin_rros_beta3.img.xz" target="_blank" rel="noopener">点我下载</a></li></ul><p>2.解压下载的xz文件.<br>(附上使用方法:去网上下载7zip,用7zip打开这两个压缩包,把里面的.img文件扔到adb文件夹下.)<br>(为后续指令方便输入请改变文件名字为:system.img)</p><p>3.先将手机关机,然后按住音量-键+电源键并迅速将手机连接至电脑,进入fastboot模式.<br>4.用win+r组合键打开cmd窗口,cd到刚才的adb文件夹下.</p><blockquote><p>cd /d d://adb</p></blockquote><p>5.使用如下指令刷入recovery</p><blockquote><p>fastboot flash recovery_ramdisk 8.6.7.img</p></blockquote><p>6.当窗口显示过时间(0.xx s)之后输入如下指令,输入好按回车拔下数据线并按住音量+键,</p><blockquote><p>fastboot reboot</p></blockquote><p>7.待进入rec之后,选择清除-格式化data-输入yes,然后按下确定键.<br>8.等他完成后返回,进入 页面,选择强制解除data锁选项,刷入.<br>9.待成功之后重启手机至rec,至此,完成了刷写rec的步骤</p><p>接下来说怎么刷系统:</p><p>1.从xda下载rom,然后解压,得到.img文件,将.img文件移动到adb文件夹下,更改名字为system.img<br>2.再次进入fastboot模式<br>3.输入如下指令</p><blockquote><p>fastboot flash system system.img</p></blockquote><p>4.等cmd窗口上显示时间之后(0.xx s),还用fastboot reboot进入rec,格式化data<br>5.刷写面具,框架等内容,然后重启高兴吧</p><p>先写这些吧…有时间再补充…<br>2018年11月17日 01时36分42秒</p><p><strong>接下来讲讲如何刷回来</strong></p><p>1.<a href="https://pan.baidu.com/s/1TYuBXVqE1EpIC0Ka_wX1Kg" target="_blank" rel="noopener">提取码:9fws</a>装到可以使用的android手机上。<br>2.打开软件,选择“添加型号”,输入你的手机型号并添加,确认无误后,点开你的型号,选择最新的版本,点击下载.<br>3,勾选这三个文件点击确认</p><blockquote><p>update.zip</p></blockquote><blockquote><p>update_full_xxx-xxxx_all_cn.zip</p></blockquote><blockquote><p>update_data_full_public.zip</p></blockquote><p>等到上面的进度条转完以后看下一步.</p><p>4.打开你的文件管理器，进入如下目录</p><blockquote><p>//sdcard/TeamMT/FirmwareFinder/xxxxxx/</p></blockquote><p>将下载好的三个文件按照如下说明更改文件名</p><blockquote><p>update.zip不用变动</p></blockquote><blockquote><p>update_data_full_public.zip改成update_data_full.zip</p></blockquote><blockquote><p>update_full_xxx-xxxx_all_cn.zip改成update_all_hw.zip</p></blockquote><p>5,返回上级目录,</p><ul><li>将xxxxxx改为HWOTA,</li><li>到<a href="https://pan.baidu.com/s/1CN9k1wpWRYAp9uNXuUXmmA" target="_blank" rel="noopener">提取码:u24</a>下载HuRUppdater.zip</li><li>将HuRUpdater.zip放到HWOTA文件夹下</li><li>再次返回到上级目录</li><li>将HWOTA这个文件夹剪切到sdcard根目录下</li><li>确认HWOTA文件夹下放有这四个压缩文件</li></ul><blockquote><p>HuRupdater.zip</p></blockquote><blockquote><p>update.zip</p></blockquote><blockquote><p>update_data_full.zip</p></blockquote><blockquote><p>update_all_hw.zip</p></blockquote><p>至此,准备工作就做好了<br>接下来讲怎么刷入:</p><p>1.刷入rec(请看上面刷入rec的方法)<br>2.重启到rec,选择安装,然后选择HWOTA目录下的HuRUdater.zip刷入<br>3.刷好以后,返回到主页,选择重启,重启到recovery,确定<br>4,等待进入到华为的recovery清除数据和缓存,清除完成后重启.</p><p>等待开机,结束</p><blockquote></blockquote><p>(ps:如果你已经刷上了第三方的rec并解了data锁,可以跳过前9步)</p>]]></content>
+    
+    <summary type="html">
+    
+      还没写完,具体内容请点开看~
+    
+    </summary>
+    
+    
+      <category term="刷机" scheme="http://yoursite.com/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+      <category term="华为" scheme="http://yoursite.com/tags/%E5%8D%8E%E4%B8%BA/"/>
+    
+      <category term="ff" scheme="http://yoursite.com/tags/ff/"/>
+    
+      <category term="线刷" scheme="http://yoursite.com/tags/%E7%BA%BF%E5%88%B7/"/>
+    
+      <category term="cmd" scheme="http://yoursite.com/tags/cmd/"/>
+    
+      <category term="荣耀" scheme="http://yoursite.com/tags/%E8%8D%A3%E8%80%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加密测试(密码是我名字的拼音233)</title>
+    <link href="http://yoursite.com/2018/11/11/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/11/11/加密测试/</id>
+    <published>2018-11-10T16:36:52.000Z</published>
+    <updated>2018-11-16T17:49:01.934Z</updated>
+    
+    <content type="html"><![CDATA[<p>嘿嘿嘿其实这里什么都没有2333</p><p>什么你非要我说些什么???</p><p>80EA657D76B452E345F3EE5D9C04FFC4AF91BDE7</p><p>最喜欢的马里奥QWQ</p>]]></content>
+    
+    <summary type="html">
+    
+      加密测试~
+    
+    </summary>
+    
+    
+      <category term="password" scheme="http://yoursite.com/tags/password/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一个blog,Hexo</title>
+    <link href="http://yoursite.com/2018/11/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAblog-Hexo/"/>
+    <id>http://yoursite.com/2018/11/10/我的第一个blog-Hexo/</id>
+    <published>2018-11-10T12:22:00.000Z</published>
+    <updated>2018-11-16T17:49:23.997Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是我的第一个blog 以后我就要在这里发表我的日志了,欢迎大家关注!</p><p>博客地址:duanyihao.github.io</p>]]></content>
+    
+    <summary type="html">
+    
+      这是我的第一个blog~
+    
+    </summary>
+    
+    
+      <category term="first" scheme="http://yoursite.com/tags/first/"/>
+    
+  </entry>
+  
+</feed>

@@ -61,7 +61,7 @@ onload = function() {
                 break;
             default:
 		// 手动更换下面这行双引号里面的内容 如"😀"
-                $elem.innerText = "别戳我~Σ(っ °Д °;)っ";
+                $elem.innerText = "还行";
                 break;
         }
         $elem.style.fontSize = Math.random() * 10 + 8 + "px";

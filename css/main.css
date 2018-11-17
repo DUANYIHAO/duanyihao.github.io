@@ -1,5 +1,5 @@
 .site-meta {
-  background: #0684bd;
+  background: #00f;
 }
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -1926,7 +1926,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #995869;
+  background: #d6f59c;
 }
 .links-of-blogroll {
   font-size: 13px;
